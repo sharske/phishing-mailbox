@@ -29,7 +29,7 @@
   <body>
     <img src="amazon.png" />
     <div class="login">
-      <a>ログイン</a>
+      <a1>ログイン</a1>
       <div class="input">
         Eメールまたは携帯電話番号
         <input type="text" />
@@ -37,9 +37,17 @@
       </div>
       <div class="agreement">
         <p>
-          Amazonの利用規約とプライバシー規約に同意いただける場合はログインしてください。
+          Amazonの<a href="https://www.amazon.co.jp/gp/help/customer/display.html/ref=ap_signin_notification_condition_of_use?ie=UTF8&nodeId=643006">利用規約</a>と<a href="https://www.amazon.co.jp/gp/help/customer/display.html/ref=ap_signin_notification_privacy_notice?ie=UTF8&nodeId=643000">プライバシー規約</a>に同意いただける場合はログインしてください。
         </p>
-        <p>お困りですか？</p>
+      </div>
+      <div onclick="obj=document.getElementById('open').style;obj.display=(obj.display=='none')?'block':'none';">
+      <details>
+        <summary>お困りですか？</summary>
+      </details>
+      </div>
+      <div id="open" style="display:none;clear:both;">
+      <p>パスワードを忘れた場合</p>
+      <p>その他のログインに関する問題</p>
       </div>
     </div>
   </body>
