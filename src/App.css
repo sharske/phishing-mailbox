@@ -3,7 +3,7 @@ img {
   display: block;
   margin: 0 auto;
 }
-a {
+a1 {
   font-size: 27px;
 }
 
@@ -56,4 +56,11 @@ button {
 }
 .button :hover {
   background-color: #f0c14b;
+}
+a{
+  color: #0076c4;
+}
+summary {
+  cursor: pointer;
+  font-size: 12px;
 }
