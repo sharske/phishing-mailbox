@@ -57,10 +57,22 @@ button {
 .button :hover {
   background-color: #f0c14b;
 }
-a{
+a {
   color: #0076c4;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 summary {
   cursor: pointer;
+  font-size: 12px;
+  color: #0076c4;
+}
+summary:hover {
+  text-decoration: underline;
+  color: #f7bd2d;
+}
+p {
   font-size: 12px;
 }
