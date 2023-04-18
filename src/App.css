@@ -76,3 +76,32 @@ summary:hover {
 p {
   font-size: 12px;
 }
+
+.head-border {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #898989;
+  font-family: "Hiragino Kaku Gothic Pro W3", "Hiragino Kaku Gothic ProN",
+    Meiryo, sans-serif;
+    font-size: 12px;
+}
+
+.head-border::before,
+.head-border::after{
+  content:"";
+  width:64px;
+  border: 0.5px solid rgb(237, 234, 234);
+  margin: 28px;
+}
+
+.head-border::before {
+  margin-right: 1rem; 
+}
+.head-border::after {
+  margin-left: 1rem; 
+}
+
+.button2{
+  text-align: center;
+}
