@@ -27,32 +27,46 @@
     <title>Amazonサインイン</title>
   </head>
   <body>
-    <img src="amazon.png" />
-    <div class="login">
-      <a1>ログイン</a1>
-      <div class="input">
-        Eメールまたは携帯電話番号
-        <input type="text" />
-        <p class="button"><button>次に進む</button></p>
-      </div>
+    <img class="amazon-top" src="amazon.png" />
+    <div class="login-frame">
+      <h1>ログイン</h1>
+      <p class="mailornumber">Eメールまたは携帯電話番号</p>
+      <input class="input-form" type="text" />
+      <button class="next-button"><p class="next">次に進む</p></button>
       <div class="agreement">
         <p>
-          Amazonの<a href="https://www.amazon.co.jp/gp/help/customer/display.html/ref=ap_signin_notification_condition_of_use?ie=UTF8&nodeId=643006">利用規約</a>と<a href="https://www.amazon.co.jp/gp/help/customer/display.html/ref=ap_signin_notification_privacy_notice?ie=UTF8&nodeId=643000">プライバシー規約</a>に同意いただける場合はログインしてください。
+          Amazonの<a
+            href="https://www.amazon.co.jp/gp/help/customer/display.html/ref=ap_signin_notification_condition_of_use?ie=UTF8&nodeId=643006"
+            >利用規約</a
+          >と<a
+            href="https://www.amazon.co.jp/gp/help/customer/display.html/ref=ap_signin_notification_privacy_notice?ie=UTF8&nodeId=643000"
+            >プライバシー規約</a
+          >に同意いただける場合はログインしてください。
         </p>
       </div>
-      <div onclick="obj=document.getElementById('open').style;obj.display=(obj.display=='none')?'block':'none';">
-      <details>
-        <summary>お困りですか？</summary>
-      </details>
+      <div
+        onclick="obj=document.getElementById('open').style;obj.display=(obj.display=='none')?'block':'none';"
+      >
+        <details>
+          <summary class="help">お困りですか？</summary>
+        </details>
       </div>
-      <div id="open" style="display:none;clear:both;">
-      <p><a href="https://www.amazon.co.jp/ap/forgotpassword?showRememberMe=true&openid.pape.max_auth_age=0&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&pageId=jpflex&mobileBrowserWeblabTreatment=C&openid.return_to=https%3A%2F%2Fwww.amazon.co.jp%2F%3F%26tag%3Dhydjpabky-22%26ref%3Dnav_custrec_signin%26adgrpid%3D119145623274%26hvadid%3D627540356526%26hvqmt%3De%26hvdev%3Dc%26hvtargid%3Dkwd-10573980%26hydadcr%3D27922_14610706&prevRID=XYZ33BHJFX5DQQTSE7AE&openid.assoc_handle=jpflex&openid.mode=checkid_setup&desktopBrowserWeblabTreatment=C&prepopulatedLoginId=&failedSignInCount=0&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0">パスワードを忘れた場合</a></p>
-      <p><a href="https://www.amazon.co.jp/gp/help/customer/account-issues/ref=ap_login_with_otp_claim_collection?ie=UTF8">その他のログインに関する問題</a></p>
+      <div id="open" style="display: none; clear: both">
+        <p>
+          <a
+            href="https://www.amazon.co.jp/ap/forgotpassword?showRememberMe=true&openid.pape.max_auth_age=0&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&pageId=jpflex&mobileBrowserWeblabTreatment=C&openid.return_to=https%3A%2F%2Fwww.amazon.co.jp%2F%3F%26tag%3Dhydjpabky-22%26ref%3Dnav_custrec_signin%26adgrpid%3D119145623274%26hvadid%3D627540356526%26hvqmt%3De%26hvdev%3Dc%26hvtargid%3Dkwd-10573980%26hydadcr%3D27922_14610706&prevRID=XYZ33BHJFX5DQQTSE7AE&openid.assoc_handle=jpflex&openid.mode=checkid_setup&desktopBrowserWeblabTreatment=C&prepopulatedLoginId=&failedSignInCount=0&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
+            >パスワードを忘れた場合</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://www.amazon.co.jp/gp/help/customer/account-issues/ref=ap_login_with_otp_claim_collection?ie=UTF8"
+            >その他のログインに関する問題</a
+          >
+        </p>
       </div>
     </div>
-    <div class="head-border">
-      初めてAmazonをご利用ですか?
-    </div>
+    <div class="head-border">初めてAmazonをご利用ですか?</div>
     <p class="button2"><button>Amazonアカウントを作成する</button></p>
   </body>
 </html>
