@@ -1,28 +1,29 @@
-img {
+.amazon-top {
   width: 180px;
   display: block;
   margin: 0 auto;
 }
-a1 {
+h1 {
   font-size: 27px;
 }
 
-input {
+.input-form {
+  border: 1px solid #898989;
   height: 25px;
   width: 270px;
   /* font-size: 18px;
   font-weight: 1px; */
 }
 
-.login {
-  width: 295px;
+.login-frame {
+  width: 310px;
   padding: 20px;
   height: auto;
   border: 1px solid rgb(228, 226, 226);
   border-radius: 5px;
   margin: 0 auto;
 }
-.input {
+.mailornumber {
   margin-top: 10px;
   font-weight: bold;
   font-size: 14px;
@@ -45,14 +46,15 @@ input[type="text"]:focus {
   font-size: 12px;
 }
 
-button {
-  width: 280px;
-  height: 30px;
+.next-button {
+  width: 270px;
+  height: 26px;
   background: #f6cb5e;
   /* border-color: #a88734 #9c7e31 #846a29; */
   /* border-color: rgb(224, 217, 217); */
   border: solid 1px rgb(150, 149, 149);
   border-radius: 3px;
+  margin: 10px 0 10px 0;
 }
 .button :hover {
   background-color: #f0c14b;
@@ -68,10 +70,17 @@ summary {
   cursor: pointer;
   font-size: 12px;
   color: #0076c4;
+  display: list-item;
+}
+.help {
+  margin-top: 10px;
 }
 summary:hover {
   text-decoration: underline;
   color: #f7bd2d;
+}
+.next {
+  text-align: center;
 }
 p {
   font-size: 12px;
@@ -84,24 +93,24 @@ p {
   color: #898989;
   font-family: "Hiragino Kaku Gothic Pro W3", "Hiragino Kaku Gothic ProN",
     Meiryo, sans-serif;
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .head-border::before,
-.head-border::after{
-  content:"";
-  width:64px;
+.head-border::after {
+  content: "";
+  width: 64px;
   border: 0.5px solid rgb(237, 234, 234);
   margin: 28px;
 }
 
 .head-border::before {
-  margin-right: 1rem; 
+  margin-right: 1rem;
 }
 .head-border::after {
-  margin-left: 1rem; 
+  margin-left: 1rem;
 }
 
-.button2{
+.button2 {
   text-align: center;
 }
