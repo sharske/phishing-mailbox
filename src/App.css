@@ -55,6 +55,7 @@ input[type="text"]:focus {
   border: solid 1px rgb(150, 149, 149);
   border-radius: 3px;
   margin: 10px 0 10px 0;
+  /* cursor: pointer; */
 }
 
 .url {
@@ -74,7 +75,7 @@ summary {
 .help {
   margin-top: 10px;
 }
-.help:hover{
+.help:hover {
   text-decoration: underline;
 }
 
@@ -119,9 +120,6 @@ summary {
   width: 330px;
   height: 28px;
   background: linear-gradient(to bottom, #f8f8f9, rgb(234, 235, 237));
-  /*background: rgb(234, 235, 237);
-  /* border-color: #a88734 #9c7e31 #846a29; */
-  /* border-color: rgb(224, 217, 217); */
   border: solid 1px rgb(179, 179, 180);
   border-radius: 3px;
   margin: auto;
@@ -132,6 +130,6 @@ summary {
   font-family: "Hiragino Kaku Gothic Pro W3", "Hiragino Kaku Gothic ProN",
     Meiryo, sans-serif;
 }
-.createbutton:hover{
+.createbutton:hover {
   background: #e7e9ec;
 }
