@@ -10,13 +10,13 @@ h1 {
 .input-form {
   border: 1px solid #898989;
   height: 25px;
-  width: 270px;
+  width: 290px;
   /* font-size: 18px;
   font-weight: 1px; */
 }
 
 .login-frame {
-  width: 310px;
+  width: 330px;
   padding: 20px;
   height: auto;
   border: 1px solid rgb(228, 226, 226);
@@ -47,21 +47,20 @@ input[type="text"]:focus {
 }
 
 .next-button {
-  width: 270px;
+  width: 290px;
   height: 26px;
-  background: #f6cb5e;
+  background: linear-gradient(to bottom, #f2e0b2, #f8be2d);
   /* border-color: #a88734 #9c7e31 #846a29; */
   /* border-color: rgb(224, 217, 217); */
   border: solid 1px rgb(150, 149, 149);
   border-radius: 3px;
   margin: 10px 0 10px 0;
 }
-.button :hover {
-  background-color: #f0c14b;
-}
-a {
+
+.url {
   color: #0076c4;
   text-decoration: none;
+  font-size: 12px;
 }
 a:hover {
   text-decoration: underline;
@@ -75,14 +74,19 @@ summary {
 .help {
   margin-top: 10px;
 }
-summary:hover {
+.help:hover{
   text-decoration: underline;
-  color: #f7bd2d;
+}
+
+.next-button:hover {
+  text-decoration: none;
+  background: linear-gradient(to bottom, #f7da92, #f8be2d);
 }
 .next {
   text-align: center;
+  font-size: 13px;
 }
-p {
+.fontsize {
   font-size: 12px;
 }
 
@@ -111,6 +115,23 @@ p {
   margin-left: 1rem;
 }
 
-.button2 {
+.createbutton {
+  width: 330px;
+  height: 28px;
+  background: linear-gradient(to bottom, #f8f8f9, rgb(234, 235, 237));
+  /*background: rgb(234, 235, 237);
+  /* border-color: #a88734 #9c7e31 #846a29; */
+  /* border-color: rgb(224, 217, 217); */
+  border: solid 1px rgb(179, 179, 180);
+  border-radius: 3px;
+  margin: auto;
+  font-size: 13px;
+  display: flex;
   text-align: center;
+  justify-content: center;
+  font-family: "Hiragino Kaku Gothic Pro W3", "Hiragino Kaku Gothic ProN",
+    Meiryo, sans-serif;
+}
+.createbutton:hover{
+  background: #e7e9ec;
 }
