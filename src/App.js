@@ -8,15 +8,15 @@ function App() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetch('//localhost:3000/users',{
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({ email, pass })
+    fetch("http://localhost:3001/users", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password }),
     })
-     .then(response => response.json())
-     .then(data => console.log(data))
-     .catch(error => console.error(error));
-  }
+      .then((response) => response.json())
+      .then((data) => console.log(data))
+      .catch((error) => console.error(error));
+  };
 
   return (
     <div>
@@ -98,7 +98,6 @@ function App() {
       </div>
     </div>
   );
-}; 
-
+}
 
 export default App;
