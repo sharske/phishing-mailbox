@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-function App()  {
+function App() {
   // const onClickbutton = (e) => alert({val});
   // const [text, setText] = useState("");
-  const [email, setEmail] = React.useState('');
-  const [pass, setPass] = React.useState('');
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
   // const onClickbutton = (e) => alert(val);
-  
+
   const handleSubmit = (event) => {
     event.preventDefault();
     fetch('//localhost:3000/users',{
@@ -27,15 +27,27 @@ function App()  {
 
         <form onSubmit={handleSubmit}>
           <label>
-          Eメールアドレス
-        <input  className="input-form" type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
-        </label>
-        <label>パスワード
-        <input  className="input-form" type="text" value={pass} onChange={(e) => setPass(e.target.value)} />
-        </label>
-        <button  type="submit" className="next-button">次に進む
-          {/* <input className="next" type="submit"  value="次に進む"/> */}
-        </button>
+            Eメールアドレス
+            <input
+              className="input-form"
+              type="text"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </label>
+          <label>
+            パスワード
+            <input
+              className="input-form"
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </label>
+          <button type="submit" className="next-button">
+            次に進む
+            {/* <input className="next" type="submit"  value="次に進む"/> */}
+          </button>
         </form>
         <div className="agreement">
           <p className="fontsize">
