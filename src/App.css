@@ -7,29 +7,32 @@ h1 {
   font-size: 27px;
 }
 
+
 .input-form {
   border: 1px solid #898989;
-  height: 25px;
-  width: 290px;
-  /* font-size: 18px;
-  font-weight: 1px; */
+  height: 31px;
+  padding: 3px 7px;
+  border-radius: 3px;
+ 
 }
 
 .login-frame {
-  width: 330px;
+  width: 340px;
   padding: 20px;
   height: auto;
   border: 1px solid rgb(228, 226, 226);
   border-radius: 5px;
   margin: 0 auto;
 }
-.mailornumber {
+label {
   margin-top: 10px;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 13px;
   text-align: left;
   margin-left: auto;
   margin-right: auto;
+  font-family: "Hiragino Kaku Gothic Pro W3", "Hiragino Kaku Gothic ProN",
+  Meiryo, sans-serif;
 }
 input[type="text"]:focus {
   outline: none;
@@ -46,38 +49,26 @@ input[type="text"]:focus {
   font-size: 12px;
 }
 
+.loginlabel{
+  text-align: center;
+  font-size: 13px;
+}
+
 .next-button {
   width: 290px;
-  height: 26px;
+  height: 30px;
   background: linear-gradient(to bottom, #f2e0b2, #f8be2d);
-  /* border-color: #a88734 #9c7e31 #846a29; */
-  /* border-color: rgb(224, 217, 217); */
   border: solid 1px rgb(150, 149, 149);
   border-radius: 3px;
   margin: 10px 0 10px 0;
-  /* cursor: pointer; */
 }
 
-.url {
-  color: #0076c4;
-  text-decoration: none;
-  font-size: 12px;
-}
+
 a:hover {
   text-decoration: underline;
-}
-summary {
-  cursor: pointer;
-  font-size: 12px;
-  color: #0076c4;
-  display: list-item;
-}
-.help {
-  margin-top: 10px;
-}
-.help:hover {
-  text-decoration: underline;
-}
+  color: rgb(190, 70, 14);
+  }
+  
 
 .next-button:hover {
   text-decoration: none;
@@ -103,21 +94,22 @@ summary {
 
 .head-border::before,
 .head-border::after {
+  display: block;
   content: "";
-  width: 64px;
+  width: 20px;
   border: 0.5px solid rgb(237, 234, 234);
   margin: 28px;
 }
 
 .head-border::before {
-  margin-right: 1rem;
+  margin-right: 5px;
 }
 .head-border::after {
-  margin-left: 1rem;
+  margin-left: 5px;
 }
 
 .createbutton {
-  width: 330px;
+  width: 290px;
   height: 28px;
   background: linear-gradient(to bottom, #f8f8f9, rgb(234, 235, 237));
   border: solid 1px rgb(179, 179, 180);
@@ -132,4 +124,19 @@ summary {
 }
 .createbutton:hover {
   background: #e7e9ec;
+}
+form{
+  margin-top: 5px;
+}
+input  {
+  margin-bottom: 10px ;
+}
+
+.forget-pass{
+  margin-left: 80px;
+  font-weight: 100;
+  color: #0076c4;
+}
+.keeplogin{
+  font-weight: 100;
 }
