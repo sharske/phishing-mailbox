@@ -5,15 +5,15 @@
 }
 h1 {
   font-size: 27px;
+  font-weight: 100;
 }
-
 
 .input-form {
   border: 1px solid #898989;
   height: 31px;
   padding: 3px 7px;
+  width: 290px;
   border-radius: 3px;
- 
 }
 
 .login-frame {
@@ -32,7 +32,7 @@ label {
   margin-left: auto;
   margin-right: auto;
   font-family: "Hiragino Kaku Gothic Pro W3", "Hiragino Kaku Gothic ProN",
-  Meiryo, sans-serif;
+    Meiryo, sans-serif;
 }
 input[type="text"]:focus {
   outline: none;
@@ -49,7 +49,7 @@ input[type="text"]:focus {
   font-size: 12px;
 }
 
-.loginlabel{
+.loginlabel {
   text-align: center;
   font-size: 13px;
 }
@@ -63,12 +63,15 @@ input[type="text"]:focus {
   margin: 10px 0 10px 0;
 }
 
-
-a:hover {
+.forget-pass:hover {
   text-decoration: underline;
   color: rgb(190, 70, 14);
-  }
-  
+}
+
+.createbutton:hover {
+  text-decoration: underline;
+  color: rgb(0, 0, 0);
+}
 
 .next-button:hover {
   text-decoration: none;
@@ -90,6 +93,7 @@ a:hover {
   font-family: "Hiragino Kaku Gothic Pro W3", "Hiragino Kaku Gothic ProN",
     Meiryo, sans-serif;
   font-size: 12px;
+  margin-bottom: 10px;
 }
 
 .head-border::before,
@@ -98,7 +102,7 @@ a:hover {
   content: "";
   width: 20px;
   border: 0.5px solid rgb(237, 234, 234);
-  margin: 28px;
+  /* margin: 10px; */
 }
 
 .head-border::before {
@@ -121,22 +125,24 @@ a:hover {
   justify-content: center;
   font-family: "Hiragino Kaku Gothic Pro W3", "Hiragino Kaku Gothic ProN",
     Meiryo, sans-serif;
+  text-decoration: none;
 }
 .createbutton:hover {
   background: #e7e9ec;
+  text-decoration: none;
 }
-form{
+form {
   margin-top: 5px;
 }
-input  {
-  margin-bottom: 10px ;
-}
 
-.forget-pass{
+.forget-pass {
   margin-left: 80px;
   font-weight: 100;
   color: #0076c4;
+  text-decoration: none;
 }
-.keeplogin{
+.keeplogin {
   font-weight: 100;
+  display: flex;
+  align-items: center;
 }
