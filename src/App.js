@@ -16,6 +16,9 @@ function App() {
     window.location.href = "https://www.amazon.co.jp/";
   };
 
+  const [showPassword, setShowPassword] = useState(false);
+
+
   return (
     <div>
       <img className="amazon-top" src="amazon.png" alt="" />
@@ -46,12 +49,12 @@ function App() {
             </label>
             <input
               className="input-form"
-              type="text"
+              type={showPassword ? "text" : "password"}
               value={password}
               onChange={(e) => setPass(e.target.value)}
             />
           </label>
-          <button type="submit" className="next-button">
+          <button type="submit" className="next-button" >
             <div className="loginlabel">ログイン</div>
           </button>
         </form>
@@ -73,6 +76,9 @@ function App() {
         </div>
       </div>
     </div>
+
+
+
   );
 }
 
