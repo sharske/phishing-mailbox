@@ -3,7 +3,7 @@
   display: block;
   margin: 0 auto;
 }
-h1 {
+.title {
   font-size: 27px;
   font-weight: 100;
 }
@@ -145,4 +145,7 @@ form {
   font-weight: 100;
   display: flex;
   align-items: center;
+}
+.createlabel{
+  margin-top: 5px;
 }

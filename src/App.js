@@ -20,7 +20,7 @@ function App() {
     <div>
       <img className="amazon-top" src="amazon.png" alt="" />
       <div className="login-frame">
-        <h1>ログイン</h1>
+        <h1 className="title">ログイン</h1>
 
         <form onSubmit={handleSubmit}>
           <label>
@@ -68,7 +68,7 @@ function App() {
             className="createbutton"
             href="https://www.amazon.co.jp/ap/register?showRememberMe=true&openid.pape.max_auth_age=0&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&pageId=jpflex&mobileBrowserWeblabTreatment=C&openid.return_to=https%3A%2F%2Fwww.amazon.co.jp%2F%25E3%2583%25AD%25E3%2582%25B0%25E3%2582%25A4%25E3%2583%25B3%2Fs%3Fk%3D%25E3%2583%25AD%25E3%2582%25B0%25E3%2582%25A4%25E3%2583%25B3%26ref_%3Dnav_signin&prevRID=PXT8E11B4QSG3RBHZT2Y&openid.assoc_handle=jpflex&openid.mode=checkid_setup&desktopBrowserWeblabTreatment=C&prepopulatedLoginId=&failedSignInCount=0&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
           >
-            Amazonアカウントを作成する
+            <p className="createlabel">Amazonアカウントを作成する</p>
           </a>
         </div>
       </div>
