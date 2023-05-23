@@ -45,7 +45,7 @@ input[type="text"]:focus {
     Meiryo, sans-serif;
 }
 
-input[type= "password"]:focus {
+input[type="password"]:focus {
   outline: none;
   border: solid 1px orange;
   border-radius: 3px;
@@ -157,11 +157,9 @@ form {
   display: flex;
   align-items: center;
 }
-.createlabel{
+.createlabel {
   margin-top: 5px;
 }
-
-
 
 .balloon2 {
   position: relative;
@@ -173,7 +171,7 @@ form {
   width: 400px;
   color: #555;
   font-size: 13px;
-  background: #FFF;
+  background: #fff;
   border: solid 1px rgb(228, 226, 226);
   box-sizing: border-box;
   border-radius: 3px;
@@ -186,7 +184,7 @@ form {
   left: 50%;
   margin-left: -15px;
   border: 12px solid transparent;
-  border-top: 12px solid #FFF;
+  border-top: 12px solid #fff;
   z-index: 2;
 }
 
@@ -206,6 +204,8 @@ form {
   padding: 0;
 }
 
-.detail-popup{
-  padding: 10px 200px;
+.detail-popup {
+  position: relative;
+  top: -340px;
+  left: 342px;
 }

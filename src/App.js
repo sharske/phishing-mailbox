@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-
-import React, { useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { f00d, faFontAwesome } from "@fortawesome/free-brands-svg-icons";
 
 function App() {
   const [email, setEmail] = React.useState("");
@@ -22,7 +21,6 @@ function App() {
 
   const [showPassword, setShowPassword] = useState(false);
 
-
   const [showPopup, setShowPopup] = useState(false);
 
   const handleClick = () => {
@@ -32,26 +30,6 @@ function App() {
   const closePopup = () => {
     setShowPopup(false);
   };
-
-
-
-
-
-
-
-  const history = useHistory();
-
-  useEffect(() => {
-    const redirectTimeout = setTimeout(() => {
-      history.push('/second-page'); // 再度遷移する先のURLを指定します
-    }, 3000); // 3秒後に再度遷移します
-
-    return () => {
-      clearTimeout(redirectTimeout);
-    };
-  }, [history]);
-
-
 
   return (
     <div>
@@ -88,7 +66,7 @@ function App() {
               onChange={(e) => setPass(e.target.value)}
             />
           </label>
-          <button type="submit" className="next-button" >
+          <button type="submit" className="next-button">
             <div className="loginlabel">ログイン</div>
           </button>
         </form>
@@ -96,7 +74,9 @@ function App() {
         <div>
           <label className="keeplogin">
             <input className="checkbox" type="checkbox" />
-            <div>ログインしたままにする <span onClick={handleClick}>詳細</span> </div>
+            <div>
+              ログインしたままにする <span onClick={handleClick}>詳細</span>{" "}
+            </div>
           </label>
         </div>
         <p className="head-border">初めてAmazonをご利用ですか?</p>
@@ -109,28 +89,28 @@ function App() {
           </a>
         </div>
       </div>
-
       <div className="detail-popup">
-      {showPopup && (
-        <div className="balloon2">
-          <div className="popup-content">
-            <h4>[ログインしたままにする]チェックボックス</h4>
-            <p>「ログインしたままにする」を選択すると、このデバイスでログインが求められる回数が減ります。</p>
-            <p>お客様のアカウントのセキュリティを保つため、個人でお使いのデバイスでのみこのオプションを使うようにしてください。</p>
-            <button onClick={closePopup}>閉じる</button>
+        {showPopup && (
+          <div className="balloon2">
+            <div>
+              <h4>
+                [ログインしたままにする]チェックボックス{" "}
+                {/* <FontAwesomeIcon
+                  icon="fa-light fa-xmark"
+                  style={{ color: "#000000" }}
+                /> */}
+              </h4>
+              <p>
+                「ログインしたままにする」を選択すると、このデバイスでログインが求められる回数が減ります。
+              </p>
+              <p>
+                お客様のアカウントのセキュリティを保つため、個人でお使いのデバイスでのみこのオプションを使うようにしてください。
+              </p>
+              <button onClick={closePopup}>閉じる</button>
+            </div>
           </div>
-        </div>
-      )}
-    </div>
-
-
-
-return(
-    <div>
-      <h1>自動リダイレクト中...</h1>
-      <p>3秒後に別のページに再度遷移します。</p>
-    </div>
-  );
+        )}
+      </div>
     </div>
   );
 }
