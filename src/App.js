@@ -75,7 +75,10 @@ function App() {
           <label className="keeplogin">
             <input className="checkbox" type="checkbox" />
             <div>
-              ログインしたままにする  <span className="detail" onClick={handleClick}  >詳細</span>{" "}
+              ログインしたままにする{" "}
+              <span className="detail" onClick={handleClick}>
+                詳細
+              </span>{" "}
             </div>
           </label>
         </div>
