@@ -37,7 +37,7 @@ function App() {
       <div className="login-frame">
         <h1 className="title">ログイン</h1>
 
-        <form onSubmit={handleSubmit}>
+        <form className="loginform" onSubmit={handleSubmit}>
           <label>
             Eメールアドレス
             <input
@@ -48,7 +48,7 @@ function App() {
             />
           </label>
         </form>
-        <form onSubmit={handleSubmit}>
+        <form className="passform" onSubmit={handleSubmit}>
           <label className="pass">
             パスワード
             <label>
@@ -75,7 +75,7 @@ function App() {
           <label className="keeplogin">
             <input className="checkbox" type="checkbox" />
             <div>
-              ログインしたままにする <span onClick={handleClick}>詳細</span>{" "}
+              ログインしたままにする  <span className="detail" onClick={handleClick}  >詳細</span>{" "}
             </div>
           </label>
         </div>

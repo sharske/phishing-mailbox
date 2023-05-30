@@ -142,7 +142,11 @@ input[type="password"]:focus {
   background: #e7e9ec;
   text-decoration: none;
 }
-form {
+.loginform {
+  margin-top: 5px;
+}
+
+.passform {
   margin-top: 5px;
 }
 
@@ -204,8 +208,8 @@ form {
   padding: 0;
 }
 
-.detail-popup {
-  position: relative;
-  top: -340px;
-  left: 342px;
+.detail-popup{
+  position: absolute;
+  left: 100px;
+  top: 1px;
 }
