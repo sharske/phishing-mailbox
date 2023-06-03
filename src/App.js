@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { f00d, faFontAwesome } from "@fortawesome/free-brands-svg-icons";
+import VisibilityIcon from "@mui/icons-material/Visibility";
+import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 
 function App() {
   const [email, setEmail] = React.useState("");
-  const [password, setPass] = React.useState("");
+  const [password, setPassword] = useState("");
+  const [passwordType, setPasswordType] = useState("password");
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -31,6 +32,11 @@ function App() {
     setShowPopup(false);
   };
 
+
+
+  
+
+
   return (
     <div>
       <img className="amazon-top" src="amazon.png" alt="" />
@@ -49,6 +55,7 @@ function App() {
           </label>
         </form>
         <form className="passform" onSubmit={handleSubmit}>
+
           <label className="pass">
             パスワード
             <label>
@@ -59,13 +66,35 @@ function App() {
                 パスワードを忘れた場合
               </a>
             </label>
+            <div className="eye-position">
             <input
               className="input-form"
-              type={showPassword ? "text" : "password"}
+              type={passwordType }
+              placeholder={""}
+              autoComplete="new-password"
               value={password}
-              onChange={(e) => setPass(e.target.value)}
+              required
+              onChange={(e) => setPassword(e.target.value)}
             />
+
+            {passwordType === "password" && (
+            <VisibilityOffIcon
+              onClick={() => setPasswordType("text")}
+              className="Password__visual"
+            />
+        )} 
+        {passwordType === "text" && (
+            <VisibilityIcon
+              onClick={() => setPasswordType("password")}
+              className="Password__visual"
+            />
+        )}
+        </div>
+            
           </label>
+
+
+          
           <button type="submit" className="next-button">
             <div className="loginlabel">ログイン</div>
           </button>
@@ -98,10 +127,6 @@ function App() {
             <div>
               <h4>
                 [ログインしたままにする]チェックボックス{" "}
-                {/* <FontAwesomeIcon
-                  icon="fa-light fa-xmark"
-                  style={{ color: "#000000" }}
-                /> */}
               </h4>
               <p>
                 「ログインしたままにする」を選択すると、このデバイスでログインが求められる回数が減ります。

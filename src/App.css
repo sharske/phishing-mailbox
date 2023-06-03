@@ -213,3 +213,13 @@ input[type="password"]:focus {
   left: 100px;
   top: 1px;
 }
+
+.eye-position{
+  position: relative;
+}
+
+.Password__visual{
+  position: absolute;
+  top: 3px;
+  right: 15px;
+}
