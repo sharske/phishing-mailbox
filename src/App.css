@@ -168,10 +168,7 @@ input[type="password"]:focus {
 .balloon2 {
   position: relative;
   display: inline-block;
-  /* margin: 1.5em 0; */
   height: auto;
-  padding: 14px 18px;
-  /* min-width: 50px; */
   width: 400px;
   color: #555;
   font-size: 13px;
@@ -179,6 +176,7 @@ input[type="password"]:focus {
   border: solid 1px rgb(228, 226, 226);
   box-sizing: border-box;
   border-radius: 3px;
+
 }
 
 .balloon2:before {
@@ -203,15 +201,11 @@ input[type="password"]:focus {
   z-index: 1;
 }
 
-.balloon2 p {
-  margin: 0;
-  padding: 0;
-}
 
 .detail-popup{
   position: absolute;
-  left: 100px;
-  top: 1px;
+  left: 39%;
+  top: 23%;
 }
 
 .eye-position{
@@ -222,4 +216,33 @@ input[type="password"]:focus {
   position: absolute;
   top: 3px;
   right: 15px;
+}
+.stolen-data{
+  color: #fe0505;
+}
+
+.detail{
+  color: #0076c4;;
+}
+
+.detail:hover {
+  text-decoration: underline;
+  color: rgb(190, 70, 14);
+}
+
+.header-popup{
+  height: 40px;
+  background-color:rgb(234, 235, 237);
+  font-size: 14px;
+  padding-left: 10px ;
+  padding-top: 10px;
+  font-weight: 1000;
+  border-bottom: 1px solid rgb(228, 226, 226);
+}
+.inner-popup{
+  margin: 15px;
+}
+
+.closeicon{
+  position: fixed;
 }
