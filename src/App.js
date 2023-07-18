@@ -13,9 +13,9 @@ function  App() {
   const [isValid, setIsValid] = useState(true);
 
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    fetch("//localhost:3001/users", {
+    await fetch("//localhost:3001/sign_up", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
