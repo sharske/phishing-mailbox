@@ -1,0 +1,17 @@
+version: '3.9'
+services:
+  mailbox:
+    image: phishing-scam-scenario/mailbox
+    build:
+      context: ./mailbox
+      dockerfile: Dockerfile
+    ports:
+      - ${DEV_MAILBOX_PORT}:8025
+
+  setup:
+    image: phishing-scam-scenario/setup
+    depends_on:
+      - mailbox
+    build:
+      context: ./setup
+      dockerfile: Dockerfile
