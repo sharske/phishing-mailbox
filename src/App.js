@@ -46,8 +46,7 @@ function  App() {
 
 
 
-  return (
-   <BrowserRouter> 
+  return ( 
     <div>
       <img className="amazon-top" src="amazon.png" alt="" />
       <div className="login-frame">
@@ -159,56 +158,9 @@ function  App() {
       </div>
     </div>
 
-    <ul>
-      <li>
-        <a href="/click1">Click1</a>
-      </li>
-    </ul>
-
-    <ul>
-      <li>
-        <a href="/click2">Click2</a>
-      </li>
-    </ul>
-    
-    <Switch>
-
-    <Route exact path="/click1">
-      <Click1 />
-    </Route>
-
-    <Route exact path="/click2">
-      <Click2 />
-    </Route>
-
-    </Switch>
-   </BrowserRouter> 
-
-
-
   );
 
   
-}
-
-
-function Click1() {
-  return(
-    <div>
-      <p>まずはログインしてみよう。そのあとブラウザバックをしてClick2を押してみよう。</p>
-
-    </div>
-  );
-}
-
-function Click2() {
-  return(
-    <div>
-      <p className="stolen-data">あなたの情報は盗まれています!!!</p>
-
-      <Fetch />
-    </div>
-  );
 }
 
 export default App;
